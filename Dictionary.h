@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 using namespace std;
 
 class Dictionary {
@@ -20,4 +21,29 @@ public:
     // Return whether a key is found in the dictionary.
     // Print the buckets (both first and second level) accessed during the operation.
     bool find(string key);
+
+    //make random matrix and print after
+    void makeRandom(int nR, int nC);
+
+    //make random matrix and return it
+    vector<vector<int>> makeNewRandom(int nR, int nC);
+
+    //format key and hash for first level, return index of hash  
+    int firstLevelHash(string input, int nR, int nC);
+
+    //format key and hash for second level, return index
+    int secondLevelHash(string input, int nR, int nC, vector<vector<int>> mult);   
+
+    //print hash
+    void printHash();
+	
+private:
+    vector<vector<int>> randomMat;
+    vector<vector<string>> hashTable;
+    vector<struct secondHash> secondHashRan;
 };
+
+struct secondHash {
+	vector<vector<int>> randomMat2;
+};
+

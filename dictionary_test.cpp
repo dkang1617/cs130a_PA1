@@ -13,11 +13,14 @@ int main()
     int n = 5;
     dict.bulkInsert(n, strs);
 
+
     // Insert "Humphrey Bogart" into the dictionary.
     dict.insert("Humphrey Bogart");
 
+
     // Remove "Lauren Bacall" from the dictionary.
     dict.remove("Lauren Bacall");
+
 
     // Find "Fred Astaire" in the dictionary.
     cout << dict.find("Fred Astaire") << endl;
